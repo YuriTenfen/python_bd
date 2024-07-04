@@ -79,3 +79,8 @@ def menu_produto(opcao):
             break
         else:
             print("Opção invalida, tente novamente")
+
+
+            from conexao import conecta_db
+
+
