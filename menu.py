@@ -3,6 +3,7 @@ from cadastro_produto import menu_produto
 from cadastro_cliente import menu_cliente
 from cadastro_usuario import menu_usuario
 from conexao import conecta_db
+from vendas import menu_vendas
 
 def login(conexao) -> None:
    login =  input("Digite o login:")
@@ -27,7 +28,8 @@ def menu_principal(admin):
     print("|     2 - Produto                |")
     print("|     3 - Cliente                |")
     print("|     4 - Usuario                |")
-    print("|     5 - Sair do Sistema        |")
+    print("|     5 - Vendas                 |")
+    print("|     6 - Sair do Sistema        |")
     print("|--------------------------------|")
 
     while True:
@@ -42,6 +44,8 @@ def menu_principal(admin):
         elif opcao == "4":
             menu_usuario(opcao,admin)
         elif opcao == "5":
+            menu_vendas(opcao)
+        elif opcao == "6":
             break
         else:
             print("Opção invalida, tente novamente")
